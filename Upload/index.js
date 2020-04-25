@@ -59,9 +59,7 @@ const multerConfig = {
       };
 
 
-      app.get('/', function(req, res){
-        res.render('home.html');
-    });
+      
 
     const multerTest = multer({
         storage: multer.memoryStorage(),
