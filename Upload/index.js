@@ -3,16 +3,39 @@ const multer = require('multer'); // file storing middleware
 const bodyParser = require('body-parser'); //cleans our req.body
 const {Storage}=require('@google-cloud/storage');
 const path=require('path');
+const passport=require('passport');
+const passportConfig=require('./config/passport-config');
+const cookieSession=require('cookie-session');
+const keys=require('./config/keys');
+const profileRoute=require('./routes/profileRoute');
 // SETUP APP
 const app = express();   //This IS an express app
 const route=require('./routes/route');
 const port = process.env.PORT || 3000;  //preconfig your port!
 
-app.use(bodyParser.urlencoded({extended:false})); //handle body requests
-app.use(bodyParser.json()); // let's make JSON work too!
-app.use(express.static('public'));
+
+
+
+
 app.set('view engine','ejs');
+
+app.use(cookieSession({
+  maxAge: 24*60*60*1000,
+  keys:[keys.keys]
+ 
+}))
+
+app.use(express.static('public'));
+
+app.use(bodyParser.urlencoded({extended:false})); 
+app.use(bodyParser.json()); 
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use('/',route);
+app.use('/user',profileRoute);
+
 
 const gc= new Storage({
     keyFilename:path.join(__dirname,"./keyFile.json"),
