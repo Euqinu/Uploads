@@ -1,5 +1,7 @@
 const express=require('express');
 const passport=require('passport');
+const passportConfig=require('../config/passport-config');
+
 const route=express.Router();
 
 const authRoute=(req,res,next)=>{
@@ -16,9 +18,14 @@ route.get('/',(req,res)=>{
     res.render('login')
 })
 
-// route.get('/home',(req,res)=>{
-//     res.render('home');
-// })
+route.get('/browse',(req,res)=>{
+    res.render('browse')
+})
+
+route.get('/home',(req,res)=>{
+    //console.log(req.user);
+    res.render('home');
+})
 
 route.get('/upload', function(req, res){
     res.render('upload');
@@ -26,19 +33,23 @@ route.get('/upload', function(req, res){
 
 route.post('/login',
 	passport.authenticate('local'),(req,res)=>{
+    
         console.log(req.user);
-       res.redirect('/user/')
+        console.log(req.session);
+       res.redirect('/home')
     });
+
+//route.post('/login',passport.authenticate('local',{successRedirect:'/home',failureRedirect:'/login'}))
 
 // route.get('/browse',authRoute,(req,res)=>{
 //     res.render('browse')
 // })
 
-route.get('/multiethnic',authRoute,(req,res)=>{
+route.get('/multiethnic',(req,res)=>{
     res.render('multiethnic');
 })
 
-route.get('/fresher',authRoute,(req,res)=>{
+route.get('/fresher',(req,res)=>{
     res.render('freshers');
 })
 

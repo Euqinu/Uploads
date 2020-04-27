@@ -12,11 +12,11 @@ const authRoute=(req,res,next)=>{
 }
 
 route.get('/',(req,res)=>{
-  //  res.render('home');
-    res.send('hello'+req.user)
+    // res.render('home');
+     res.send('hello'+req.user)
 })
 
-route.get('/browse',authRoute,(req,res)=>{
+route.get('/browse',(req,res)=>{
     res.render('browse')
 })
 

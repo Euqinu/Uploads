@@ -23,12 +23,13 @@ passport.use(new localStrategy(
    
     passport.serializeUser(function(user,done){
       console.log(user+'serialzing');
-        done(null,user.username);
+        done(null,user.id);
       });
 
-     passport.deserializeUser(function(username,done){
-       console.log(User.findOne(username)+'deserializing');
-        User.findOne(username,function(err,user){
+     passport.deserializeUser(function(id,done){
+       console.log(User.findById(id)+'deserializing');
+       
+        User.findById(id,function(err,user){
           done(err,user);
         });
       });
