@@ -28,8 +28,13 @@ passport.use(new localStrategy(
 
      passport.deserializeUser(function(id,done){
        console.log(User.findById(id)+'deserializing');
-       
-        User.findById(id,function(err,user){
-          done(err,user);
-        });
+       User.findById(id).then(function(user){
+         console.log(user+'deserializng function')
+         done(null,user);
+       })
+        // User.findById(id,function(err,user){
+        //   console.log(user+'deserializing part')
+        //   done(err,user);
+        // });
+
       });

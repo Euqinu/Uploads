@@ -11,7 +11,7 @@ function findOne(username){
     return user.find(data=>data.username===username)
 }
 
-function findById(id){
+async function findById(id){
     return user.find(data=>data.id===id)
 }
 
