@@ -1,5 +1,4 @@
 const express = require('express');  
-const multer = require('multer'); 
 const bodyParser = require('body-parser'); 
 const cookieSession=require('cookie-session');
 const passport=require('passport');
@@ -14,6 +13,8 @@ const port = process.env.PORT || 3000;
 
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 app.set('view engine','ejs');
 
 app.use(bodyParser.urlencoded({extended:false})); 

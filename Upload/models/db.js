@@ -1,9 +1,10 @@
+const Database=require('../config/keys.js')
 
 const user=[
     {
-        id:'1',
-        username:'unique',
-        password:'11'
+        id:Database.id,
+        username:Database.username,
+        password:Database.password
     }
 ];
 

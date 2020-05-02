@@ -6,8 +6,7 @@ const route=express.Router();
 
 route.post('/login',
 	passport.authenticate('local'),(req,res)=>{
-        console.log(req.user);
-        console.log(req.session);
+        console.log('Login route successful');        
         res.redirect('/home');
 });
 
