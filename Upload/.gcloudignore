@@ -3,4 +3,4 @@
 .gitignore
 
 node_modules
-#!include:.gitignore
+keyFile.json
