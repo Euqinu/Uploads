@@ -1,4 +1,3 @@
 
 
-node_modules
-keyFile.json
+!include:.gitignore
