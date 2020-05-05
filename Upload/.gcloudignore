@@ -1,3 +1,6 @@
+.gcloudignore
+.git
+.gitignore
 
-
-!include:.gitignore
+node_modules
+#!include:.gitignore

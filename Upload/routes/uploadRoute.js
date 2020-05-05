@@ -70,6 +70,7 @@ route.post('/', multerTest.array('file', 12), async function (req, res) {
         metadata: { contentType: file.mimetype }
       }).on('finish', async response => {
         await blob.makePublic()
+        console.log(response)
         resolve(response)
       }).on('error', err => {
         reject('upload error: ', err)
