@@ -13,4 +13,15 @@
 
 # [START gae_quickstart_yaml]
 runtime: nodejs10
+handlers:
+- url: /public
+  static_dir: public
+
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto
+
+env_variables:
+  GCLOUD_STORAGE_BUCKET: nitr-bucket
 # [END gae_quickstart_yaml]
