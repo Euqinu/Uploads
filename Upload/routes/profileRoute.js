@@ -14,15 +14,19 @@ const authRoute=(req,res,next)=>{
 }
 
 route.get('/',(req,res)=>{
-    res.render('login')
+    res.render('loginMobile')
+});
+
+route.get('/test',(req,res)=>{
+    res.render('test')
 });
 
 route.get('/home',authRoute,(req,res)=>{
-    res.render('home');
+    res.render('homeMobile');
 });
 
 route.get('/browse',authRoute,(req,res)=>{
-    res.render('browse')
+    res.render('browseMobile')
 });
 
 route.get('/upload',authRoute, function(req, res){

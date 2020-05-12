@@ -14,8 +14,8 @@
 # [START gae_quickstart_yaml]
 runtime: nodejs10
 handlers:
-- url: /public
-  static_dir: public
+- url: /static
+  static_dir: static
 
 - url: /.*
   secure: always

@@ -7,25 +7,28 @@ const route = express.Router();
 
 
 //Creating a client
-// const gc = new Storage({
-//   keyFilename: path.join(__dirname, "../keyFile.json"),
-//   projectId: 'whatstrending-0013'
-// });
+const gc = new Storage({
+  keyFilename: path.join(__dirname, "../keyFile.json"),
+  projectId: 'nitr2k15'
+});
 
-const gc= new Storage();
+//const gc= new Storage();
 
-const nitrBucket = gc.bucket(process.env.GCLOUD_STORAGE_BUCKET);
+const nitrBucket = gc.bucket('nitr-bucket');
+
+
 
 
 
 const multerTest = multer({
   storage: multer.memoryStorage(),
   limits: {
-    fileSize: 50 * 1024 * 1024,
+    fileSize: 5 * 1024 * 1024,
   },
 });
 
 route.post('/', multerTest.array('file', 12), async function (req, res) {
+ // console.log(nitrBucket);
   let promises = [];
   if (!req.files) {
     res.status(400).send('No file uploaded.');
@@ -33,6 +36,7 @@ route.post('/', multerTest.array('file', 12), async function (req, res) {
   }
 
   req.files.forEach((file) => {
+    console.log(file);
     const blob = nitrBucket.file(file.originalname)
     const newPromise = new Promise((resolve, reject) => {
 

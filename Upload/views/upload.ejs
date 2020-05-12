@@ -3,22 +3,29 @@
  <head>
     <meta charset="utf-8">
     <title>NITR 2015-19</title>
-    <link rel="stylesheet" href="/public/css/browse.css">
+    <link rel="stylesheet" href="./public/css/upload.css">
   </head>
   <body>
     <div class="container">
       <header>
-        <a href="/home" style="color:#00C2FF;"><h1>NITR</h1></a>
+        <a href="/home" style="color:#00C2FF; text-decoration: none;"><h1 class="logo">NITR</h1></a>
+        
       <nav>
-        <ul class="show-bar hide-bar" id="nav">
+        <a href="#" class="hide-desktop">
+          <img src="./public/homepage/ham.svg" alt="toggle menu" class="menu" id="menu">
+      </a>
+        <ul class="show-desktop hide-mobile" id="nav">
+          <li id="exit" class="exit-btn hide-desktop">
+            <img src="./public/homepage/exit.svg" alt="exit menu">
+        </li>
           <li><a href="/home">Home</a></li>
           <li><a href="/upload">Upload</a></li>
           <li><a href="/logout">Logout</a></li>
         </ul>
       </nav>
-      </header>
+    </header>
     </div>
-        <div class="container">
+        <div class="container upload-body">
           <h1>Upload your photos...</h1>
           <form action="/upload-files" enctype="multipart/form-data" method="POST">
 
@@ -35,6 +42,23 @@
           </form>
         </div>
 
+        <script>
+    
+          var menu = document.getElementById('menu');
+          var nav = document.getElementById('nav');
+          var exit = document.getElementById('exit');
+  
+          menu.addEventListener('click', function(e) {
+              nav.classList.toggle('hide-mobile');
+              e.preventDefault();
+          });
+  
+          exit.addEventListener('click', function(e) {
+              nav.classList.add('hide-mobile');
+              e.preventDefault();
+          });
+  
+      </script>
 
       
 

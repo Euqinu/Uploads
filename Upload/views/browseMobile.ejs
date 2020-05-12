@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NITR 2015-19</title>
+    <link rel="stylesheet" href="/public/css/browseMobile.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="/home" style="color:#00C2FF; text-decoration: none;"><h1 class="logo">NITR</h1></a>
+        
+      <nav>
+        <a href="#" class="hide-desktop">
+          <img src="./public/homepage/ham.svg" alt="toggle menu" class="menu" id="menu">
+      </a>
+        <ul class="show-desktop hide-mobile" id="nav">
+          <li id="exit" class="exit-btn hide-desktop">
+            <img src="./public/homepage/exit.svg" alt="exit menu">
+        </li>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/upload">Upload</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+      <div class="browse-body" style="text-align: center;">
+         
+          <div class="box">
+            <a href="/fresher" class="box-one"><p>Freshers</p></a> 
+            <a href="/multiethnic" class="box-one"><p>Multi-ethnic</p></a> 
+            <a href="/upload" class="box-one"><p>Add photos</p></a> 
+          </div>
+          <div class="blue-container">
+            <div class="container">
+                <ul>
+                  <li>
+                      <img src="./public/browse/summer.gif" class="gif-image" />
+                      <h1 class="quote">DIVIDED BY BRANCH BUT UNITED BY SUMMER</h1>
+                   </li>
+                 
+                </ul>
+                
+              </div>
+          </div>
+          
+          <div class="cover">
+            <img src="./public/browse/firstyear.jpg" class="cover-image">
+        </div>
+        <div>
+            <img src="./public/browse/scroll.svg" alt="server icon" class="scroll">
+        </div>
+        
+        <div class="cover">
+            <img src="./public/browse/finalyear.jpg" class="cover-image"/>
+        </div>
+      </div>
+
+      <script>
+    
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        menu.addEventListener('click', function(e) {
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault();
+        });
+
+        exit.addEventListener('click', function(e) {
+            nav.classList.add('hide-mobile');
+            e.preventDefault();
+        });
+
+    </script>
+  </body>
+</html>

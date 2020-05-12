@@ -13,7 +13,7 @@ const route=require('./routes/route');
 const port = process.env.PORT || 3000; 
 
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'static')));
 
 
 app.set('view engine','ejs');
@@ -27,12 +27,18 @@ app.use(cookieSession({
  
  }));
 
+//  app.use(session({
+//   secret: 'work hard',
+//   resave: true,
+//   saveUninitialized: false,
+  
+// }));
 
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/',route);
 app.use('/',profileRoute);
+app.use('/login',route);
 app.use('/upload-files',uploadRoute);
 
 app.listen(port,function(){

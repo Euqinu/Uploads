@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+
+body{
+    font-family: "Montserrat";
+    color:#00C2FF;
+    margin: 0;
+}
+
+.container{
+    text-align: center;
+    padding: 0.8em 1.2em;
+}
+
+.logo{
+    margin-top: 5%;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hide-mobile{
+    display: none;
+}
+
+.menu{
+    width: 25px;
+    margin-top: 30%;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.box-one{
+    border-radius: 10px;
+    background-color: #00C2FF;
+    width: 80px;
+    height: 80px;
+    margin: 0 1.0em;
+    color: white;
+}
+
+p{
+    font-size: 0.6em;
+    text-align: center; 
+    line-height: 1.3em;
+    padding: 3.2em 0.8em;
+   
+}
+
+.cover{
+    margin-top: 50px;
+}
+a{
+    text-decoration: none;
+}
+
+.blue-container{
+    width: 100%;
+    background: #00C2FF;
+    color: white;
+    margin-top: 5%;
+    padding: 4em 0 2em;
+    border-top-left-radius: 40px;
+    transform: skewY(-2deg);
+  
+  }
+
+  nav ul {
+    position: fixed;
+    width: 60%;
+    top: 0;
+    right: 0;
+    text-align: left;
+    background: rgb(36,41,44);
+    height: 100%;
+    z-index: 7;
+    padding-top: 3em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 1em 2em;
+    background-color: rgb(49, 55, 59);
+}
+
+nav ul li a:hover {
+    background-color: rgb(65, 73, 78);
+}
+
+.exit-btn {
+    margin-bottom: 1em;
+    margin-top: -1.3em;
+    text-align: right;
+    padding: 0 1.4em;
+}
+
+.exit-btn img {
+    width: 15px;
+    cursor: pointer;
+}
+  
+.gif-image{
+    width: 20%;
+    height: 10%;
+}
+
+ul li h1{
+    transform: skewY(2deg);
+    font-size: .9em;
+}
+    
+.cover-image{
+    width: 100%;
+}
+
+.scroll{
+    margin-top: 2em;
+}
+
+.upload-body{
+    margin-top: 5em;
+}
+
+@media only screen and (min-width: 650px){
+
+
+
+    h1 {
+        font-size: 2em;
+        margin: 0;
+    }
+
+    
+    .blue-container {
+        margin: 0;
+        margin-top: 2em;
+    }
+
+    nav ul {
+        width: 40%;
+    }
+
+    .box-one{
+        height: 150px;
+        width: 150px;
+    }
+    p{
+        font-size: 1em;
+        text-align: center; 
+        padding: 3.5em 0.8em;
+    }
+
+}
+
+@media only screen and (min-width: 875px)  {
+    
+    body{
+        margin: 0;
+    }
+
+}
+
+@media only screen and (min-width: 1024px)  {
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .box{
+        margin-top: 4em;
+    }
+
+    .quote{
+        font-size: 30px ;
+    }
+
+    
+    .cover-image{
+        width: 70%;
+    }
+
+    .show-desktop {
+        display: block;
+        margin: 0 auto 13% auto;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+    nav ul {
+        position: inherit;
+        width: auto;
+        background: none;
+        height: auto;
+        display: flex;
+        padding-top: 0;
+    }
+
+    nav ul li {
+        float: left;
+    }
+
+    nav ul li a {
+        color: black;
+        background-color: inherit;
+        padding: 1em 2em;
+    }
+
+    nav ul li a:hover {
+        background-color: inherit;
+    }
+
+    .upload-body{
+        margin-top: 5em;
+    }
+
+}
+
+@media only screen and (min-width: 1600px)  {
+
+    .container {
+        width: 70%;
+    }
+
+    .blue-container {
+        padding: 7em 0 2em;
+    }
+
+}
+
+    
