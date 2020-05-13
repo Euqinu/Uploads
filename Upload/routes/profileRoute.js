@@ -17,9 +17,9 @@ route.get('/',(req,res)=>{
     res.render('loginMobile')
 });
 
-route.get('/test',(req,res)=>{
-    res.render('test')
-});
+// route.get('/test',(req,res)=>{
+//     res.render('test')
+// });
 
 route.get('/home',authRoute,(req,res)=>{
     res.render('homeMobile');
@@ -30,7 +30,7 @@ route.get('/browse',authRoute,(req,res)=>{
 });
 
 route.get('/upload',authRoute, function(req, res){
-    res.render('upload');
+    res.render('uploadPhoto');
 });
 
 route.get('/multiethnic',authRoute,(req,res)=>{

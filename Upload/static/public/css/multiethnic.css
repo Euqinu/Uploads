@@ -6,7 +6,7 @@ body {font-family: Verdana, sans-serif; margin:0; background-color: rgb(155, 218
 .slideshow-container {
   max-width: 1000px;
   position: relative;
-  margin-top: 2em;
+  margin:auto;
 }
 
 .back-button{
@@ -122,5 +122,9 @@ img{
   .back-button{
     width: 5%;
   }
+
+  .prev, .next {
+    
+    position: absolute;
   
 }

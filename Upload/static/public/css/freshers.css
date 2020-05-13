@@ -79,7 +79,7 @@
         .potrait{
           width: 100%;
           align-content: center;
-          height: 40em;
+          height: auto;
         }
         
         
@@ -121,6 +121,15 @@
          
           .back-button{
             width: 5%;
+          }
+
+          .prev, .next {
+            position: absolute;
+          }
+          .potrait{
+            width: 50%;
+            align-content: center;
+            height: 40em;
           }
          
           

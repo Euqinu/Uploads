@@ -4,4 +4,6 @@ node_modules/
 
 /static/public/extra/
 
+*.txt
+
 keyFile.json

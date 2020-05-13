@@ -51,6 +51,15 @@ header{
 h1, .subhead{
     position: relative;
     z-index: 3;
+    font-size: 1em;
+}
+
+.btn-submit{
+    font-size: 0.8em;
+}
+
+.section{
+    font-size: 0.7em;
 }
 
 nav ul {
